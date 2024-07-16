@@ -8,14 +8,28 @@ In this repository, you will find my dotfiles for my Arch Linux system. Addition
 
 ## Software to install on arch linux
 
+### Base
 ```bash
-sudo pacman -S git nano git 
+sudo pacman -S git nano intel-ucode base-devel curl jdk-openjdk
+```
+
+after intel-ucode, you need to update the grub config file
+
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
+### Additional
+
+Install additional kernel, more stable
+```bash
+sudo pacman -S linux-lts linux-lts-headers
 ```
 
 ```bash
 paccache
 vlc 
-curl
 tlp
 the fuck
 zoxide
@@ -26,10 +40,15 @@ thunderbird
 timeshift
 fkill
 fzf
-git
-nano
 flameshot
-jdk-openjdk
+bonsai
+alias
+```
+
+```bash
+# install auto-cpufreq
+# then
+sudo auto-cpufreq --install
 ```
 
 ## Memo for Arch Linux
@@ -129,6 +148,14 @@ sudo reflector --verbose --latest 10 --protocol --sort rate --save /etc/pacman.d
 #### Paru 
 
 Manage AUR packages and pacman packages
+
+##### Search for a package
+```bash
+paru -s string
+or 
+paru -Ss string
+# TODO TEST
+```
 
 ##### Install package from AUR
 ```bash

@@ -28,6 +28,7 @@ sudo pacman -S linux-lts linux-lts-headers
 ```
 
 ```bash
+paru
 paccache
 vlc 
 tlp
@@ -50,6 +51,17 @@ alias
 # then
 sudo auto-cpufreq --install
 ```
+firefos : 
+firefox edge 
+videospeed controller
+ai grammar checker and paraphraser
+ublock
+sponsor block for ytb
+dark reader
+translate web page
+enhancer for ytb
+dictionnary anywhere
+tabliss
 
 ## Memo for Arch Linux
 

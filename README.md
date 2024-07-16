@@ -63,6 +63,18 @@ enhancer for ytb
 dictionnary anywhere
 tabliss
 
+
+vscode :
+line relative 
+trailer cursor
+vscode pdf
+one dark pro theme
+material icon theme
+github copilot
+error lens
+code snap
+
+
 ## Memo for Arch Linux
 
 ### Package Management 
@@ -353,3 +365,62 @@ rsync -aAXHv --delete --exclude="lost+found" /mnt/usb/ /mnt/system
 ```
 
 ## Memo Hyprland
+
+## Memo vscode
+
+{
+    "security.workspace.trust.untrustedFiles": "open",
+
+
+    "window.zoomLevel": 2,
+
+    "files.autoSave":  "onFocusChange",
+    "files.defaultLanguage": "markdown",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+
+    "editor.lineNumbers": "relative",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.linkedEditing": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    
+
+    // explorer == barre de gauche (CTRL B)
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "material-icon-theme",
+
+    "git.enableSmartCommit": true,
+    "editor.guides.bracketPairs": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": true
+    },
+    "git.autofetch": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "editor.cursorSmoothCaretAnimation": "on",
+}
+
+
+

@@ -75,6 +75,8 @@ error lens
 code snap
 
 
+pam fingerprint
+
 ## Memo for Arch Linux
 
 ### Package Management 

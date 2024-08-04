@@ -1,6 +1,6 @@
 # Thibau1t dotfiles
 
-In this repository, you will find my dotfiles for my Arch Linux system. Additionally, you will a cheatsheet for Arch Linux, Hyperland and some software I use.
+In this repository, you will find my dotfiles for my Arch Linux system. Additionally, you will a cheatsheet for Arch Linux, Hyprland and some software I use.
 
 ## List of software
 
@@ -10,13 +10,16 @@ In this repository, you will find my dotfiles for my Arch Linux system. Addition
 
 ### Base
 ```bash
-sudo pacman -S git nano intel-ucode base-devel curl jdk-openjdk
+sudo pacman -S git intel-ucode base-devel jdk-openjdk
 ```
 
-after intel-ucode, you need to update the grub config file
-
-```bash
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+after intel-ucode, update cd /boot/loader/entries/*.conf 
+```txt
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux.img
+options root=PARTUUID=<ton-partuuid> rw
 ```
 
 

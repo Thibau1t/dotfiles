@@ -10,9 +10,24 @@ In this repository, you will find my dotfiles for my Arch Linux system. Addition
 
 ### Base
 ```bash
-sudo pacman -S git intel-ucode base-devel jdk-openjdk
-```
+sudo pacman -S git intel-ucode reflector 
+``` 
 
+   41  sudo pacman -Sy hyprpaper
+  161  sudo pacman -Sy hyprlock
+  181  sudo pacman -Sy ttf-jetbrains-mono-nerd
+  260  sudo pacman -Sy git
+  401  sudo pacman -Sy autocpufreq 
+
+    236  sudo pacman -S intel-ucode
+  275  sudo pacman -S bluez bluez-utils bluez-firmware
+  305  sudo pacman -S reflector
+  307  sudo pacman -S reflector
+  314  sudo pacman -S unzip
+  402  sudo pacman -S --needed base-devel
+  431  sudo pacman -S bluez bluez-utils
+  477  sudo pacman -S waybar
+  485  sudo pacman -S tree
 after intel-ucode, update cd /boot/loader/entries/*.conf 
 ```txt
 title   Arch Linux
@@ -34,7 +49,6 @@ sudo pacman -S linux-lts linux-lts-headers
 paru
 paccache
 vlc 
-tlp
 the fuck
 zoxide
 zsh
@@ -54,17 +68,7 @@ alias
 # then
 sudo auto-cpufreq --install
 ```
-firefos : 
-firefox edge 
-videospeed controller
-ai grammar checker and paraphraser
-ublock
-sponsor block for ytb
-dark reader
-translate web page
-enhancer for ytb
-dictionnary anywhere
-tabliss
+
 
 
 vscode :
@@ -171,7 +175,7 @@ pacman -Qlq package_name | grep /usr/bin/
 
 ```bash
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo reflector --verbose --latest 10 --protocol --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 #### Paru 
@@ -180,10 +184,7 @@ Manage AUR packages and pacman packages
 
 ##### Search for a package
 ```bash
-paru -s string
-or 
 paru -Ss string
-# TODO TEST
 ```
 
 ##### Install package from AUR

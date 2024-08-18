@@ -1,0 +1,295 @@
+/* Gruvbox Dark */
+@import "gruvbox-dark.css";
+
+/* Reset all styles*/
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: JetBrains Mono Nerd Font;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: normal;
+    min-height: 0;
+    padding-top: 0px;
+    margin-top: 1px;
+    color: @white;
+}
+
+#pulseaudio,
+#battery,
+#backlight,
+#network,
+#tray,
+#temperature,
+#cpu,
+#memory,
+#clock,
+#mode {
+    padding: 0 8px;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @white;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+tooltip {
+    background: @background;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: @white;
+    font-size: 16px;
+}
+
+button {
+    box-shadow: inset 0 -10px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -4px @white;
+}
+
+/* Modules */
+
+/* pulseaudio */
+#pulseaudio {
+    margin-left: -5px;
+    background-color: @background;
+    font-size: 16px;
+    color: @blue;
+}
+
+#pulseaudio.muted {
+    margin-left: 2px;
+    padding-left: 10px;
+    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
+
+    background-color: @background;
+    font-size: 22px;
+    color: @red;
+}
+
+/* backlight */
+#backlight {
+    background-color: @background;
+    font-size: 16px;
+    color: @yellow;
+}
+
+/* battery */
+#battery {
+    background-color: @background;
+    font-size: 16px;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+}
+
+#battery.excellent:not(.charging) {
+    color: @green;
+}
+
+#battery.good:not(.charging) {
+    color: @white;
+}
+
+#battery.fair:not(.charging) {
+    color: @yellow;
+}
+
+#battery.warning:not(.charging) {
+    color: @dark-orange;
+}
+
+#battery.critical:not(.charging) {
+    color: @dark-red;
+}
+
+/* network */
+#network {
+    border-radius: 0px 20px 20px 0px; /* top-left, top-right, bottom-right, bottom-left */
+
+    background-color: @background;
+    color: @green;
+    padding-right: 11px;
+    font-size: 16px;
+}
+
+#network.disconnected {
+    color: @dark-red;
+}
+
+/* hyprland/workspaces */
+
+#workspaces button {
+    padding: 0 11px;
+    background-color: @background;
+}
+
+#workspaces button:hover {
+    background: @black2;
+}
+
+/* temperature */
+#temperature {
+    margin-left: 2px;
+    padding-left: 15px;
+    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
+
+    background-color: @background;
+    color: @green;
+    font-size: 16px;
+}
+
+#temperature.critical {
+    color: @dark-red;
+}
+
+/* cpu */
+#cpu {
+    background-color: @background;
+    font-size: 16px;
+}
+
+#cpu.warning {
+    color: @dark-orange;
+}
+
+#cpu.critical {
+    color: @dark-red;
+}
+
+/* memory */
+#memory {
+    background-color: @background;
+    font-size: 16px;
+}
+
+#memory.good {
+    color: @yellow;
+}
+
+#memory.critical {
+    color: @dark-red;
+}
+
+/* clock */
+#clock {
+    background-color: @background;
+    font-size: 16px;
+    color: @blue;
+}
+
+/* tray */
+#tray {
+    background-color: @background;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @background;
+    color: @dark-red;
+}
+
+/* privacy */
+#privacy {
+    padding: 0;
+    background-color: @background;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: @white;
+}
+
+#privacy-item.screenshare {
+    margin-right: 10px;
+    color: @green;
+}
+
+#privacy-item.audio-in {
+    margin-right: 10px;
+    color: @red;
+}
+
+/* group-power */
+#group-power {
+    margin-right: 2px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-radius: 0px 20px 20px 0px; /* top-left, top-right, bottom-right, bottom-left */
+    background-color: @background;
+    font-size: 16px;
+}
+
+/* custom shutdown */
+#custom-shutdown {
+    font-size: 17px;
+}
+
+#custom-shutdown:hover {
+    padding-left: 8px;
+    background: @black2;
+    box-shadow: inset 0 -4px @white;
+}
+
+/* custom reboot */
+#custom-reboot {
+    padding-top: 1px;
+    font-size: 19px;
+}
+
+#custom-reboot:hover {
+    padding-left: 8px;
+    background: @black2;
+    box-shadow: inset 0 -4px @white;
+}
+
+/* custom lock */
+#custom-lock {
+    font-size: 18px;
+}
+
+#custom-lock:hover {
+    padding-left: 8px;
+    background: @black2;
+    box-shadow: inset 0 -4px @white;
+}
+
+/* custom space */
+#custom-space1 {
+    background-color: @background;
+    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
+    margin-top: 2px;
+}
+
+#custom-space2 {
+    background-color: @background;
+    border-radius: 0px 20px 20px 0px; /* top-left, top-right, bottom-right, bottom-left */
+    margin-top: 2px;
+}
+
+#custom-arch {
+    margin-left: 2px;
+    margin-right: -2px;
+    padding-left: 15px;
+    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
+
+    background-color: @background;
+}

@@ -1,0 +1,215 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "bottom",
+
+    "modules-left": [
+        "custom/arch",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "network"
+    ],
+
+    "modules-center": ["custom/space1", "hyprland/workspaces", "custom/space2"],
+
+    "modules-right": [
+        "temperature",
+        "cpu",
+        "memory",
+        "clock",
+        "privacy",
+        "tray",
+        "group/group-power"
+    ],
+
+    "pulseaudio": {
+        "scroll-step": 0.5, // %, can be a float
+        "reverse-scrolling": true,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "󰝟",
+        //"format-source": "{volume}% ",
+        "tooltip": false,
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol-qt"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "reverse-scrolling": true,
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "excellent": 100,
+            "good": 75,
+            "fair": 50,
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 5,
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+
+        "format-icons": ["󱉞", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{signalStrength}%  ",
+        "format-ethernet": "  {ifname}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 100,
+        "on-click": "$HOME/.config/waybar/scripts/networkmanager.sh"
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠",
+            "empty": "󱙝"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "temperature": {
+        "critical-threshold": 75,
+        "interval": 5,
+        "format": "{temperatureC}°{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/systeminfo.sh",
+        "thermal-zone": 6
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 10,
+        "on-click": "$HOME/.config/waybar/scripts/systeminfo.sh",
+        "states": {
+            "critical": 80,
+            "warning": 50
+        }
+    },
+
+    "memory": {
+        "format": "{}%  ",
+        "on-click": "$HOME/.config/waybar/scripts/systeminfo.sh",
+        "states": {
+            "warning": 70,
+            "good": 60,
+            "excellent": 30
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<span size='13pt' font='JetBrains Mono Nerd Font'>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#8ec07c'><b>{}</b></span>", // aqua
+                "days": "<span color='#ebdbb2'><b>{}</b></span>", // fg
+                "weeks": "<span color='#d79921'><b>W{}</b></span>", // yellow
+                "weekdays": "<span color='#d65d0e'><b>{}</b></span>", // orange
+                "today": "<span color='#cc241d'><b><u>{}</u></b></span>" // red
+            }
+        },
+        "actions": {
+            "on-click": "mode"
+        }
+    },
+
+    "privacy": {
+        "icon-spacing": 0,
+        "icon-size": 15,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 22
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 22
+            }
+        ]
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 600,
+            "transition-left-to-right": false
+        },
+        "modules": ["custom/shutdown", "custom/lock", "custom/reboot"]
+    },
+
+    "custom/shutdown": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    },
+
+    "custom/lock": {
+        "format": "󰌾 ",
+        "tooltip": false,
+        "on-click": "systemctl suspend && hyprlock"
+    },
+
+    "custom/reboot": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+
+    "custom/space1": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/space2": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/arch": {
+        "format": "󰣇 ",
+        "tooltip": false
+    }
+}

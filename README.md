@@ -51,14 +51,14 @@ Here's a quick overview of the contents of this repository:
 
 -   **[Hyprland](https://github.com/hyprwm/Hyprland)** - Dynamic tiling Wayland compositor.
 -   **[Kitty](https://github.com/kovidgoyal/kitty)** - Fast, feature-rich, GPU-based terminal emulator.
--   **[Zsh](https://github.com/zsh-users/zsh)** - A powerful shell designed for interactive use.
+-   **[Zsh](https://www.zsh.org/)** - A shell.
 -   **[Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh)** - A prompt theme engine for any shell.
 -   **[Mako](https://github.com/emersion/mako)** - A lightweight Wayland notification daemon.
 -   **[Rofi](https://github.com/davatorium/rofi)** - A window switcher, application launcher, and dmenu replacement.
--   **[Swappy](https://github.com/4lex4/swappy)** - A screenshot editing tool.
+-   **[Swappy](https://github.com/jtheoof/swappy)** - A screenshot editing tool.
 -   **[Waybar](https://github.com/Alexays/Waybar)** - Highly customizable Wayland bar.
--   **[Cliphist](https://github.com/cliphist/cliphist)** - A clipboard history manager.
--   **[Firefox](https://github.com/mozilla/gecko-dev)** - A web browser.
+-   **[Cliphist](https://github.com/sentriz/cliphist)** - A clipboard history manager.
+-   **[Firefox EdgeArc](https://github.com/artsyfriedchicken/EdgyArc-fr)** - Firefox with Arc features integrated.
 -   **[Visual Studio Code](https://github.com/microsoft/vscode)** - A code editor.
 -   **[Thunar](https://docs.xfce.org/xfce/thunar/start)** - A file manager.
 
@@ -68,7 +68,7 @@ Here are some of my favorite commands and tools:
 
 -   **[Bat](https://github.com/sharkdp/bat)** - A `cat` clone with syntax highlighting and Git integration.
 -   **[Fzf](https://github.com/junegunn/fzf)** - A general-purpose command-line fuzzy finder.
--   **[Zoxyde](https://github.com/tyrannosaurus/zoxyde)** - A smarter cd command.
+-   **[Zoxyde](https://github.com/ajeetdsouza/zoxide)** - A smarter cd command.
 -   **[Zsh Plugins](https://github.com/zdharma-continuum/zinit)** -
     -   `zinit light zsh-users/zsh-syntax-highlighting` - Zsh syntax highlighting.
     -   `zinit light zsh-users/zsh-completions` - Additional Zsh completions.

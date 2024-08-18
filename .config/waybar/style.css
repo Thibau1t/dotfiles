@@ -219,13 +219,11 @@ button:hover {
 }
 
 #privacy-item.screenshare {
-    margin-right: 10px;
-    color: @green;
+    padding-right: 8px;
 }
 
 #privacy-item.audio-in {
-    margin-right: 10px;
-    color: @red;
+    padding-right: 8px;
 }
 
 /* group-power */

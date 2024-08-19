@@ -61,6 +61,15 @@ button:hover {
 
 /* Modules */
 
+/* arch logo */
+#custom-arch {
+    margin-left: 2px;
+    margin-right: -2px;
+    padding-left: 15px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: @background;
+}
+
 /* pulseaudio */
 #pulseaudio {
     margin-left: -5px;
@@ -131,7 +140,28 @@ button:hover {
     color: @dark-red;
 }
 
+/* hyprland window */
+#window {
+    margin-left: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: @background;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+#window label {
+    font-size: 14px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
 /* hyprland/workspaces */
+#workspaces label {
+    font-size: 22px;
+}
 
 #workspaces button {
     padding: 0 11px;
@@ -273,21 +303,12 @@ button:hover {
 /* custom space */
 #custom-space1 {
     background-color: @background;
-    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
+    border-radius: 20px 0px 0px 20px;
     margin-top: 2px;
 }
 
 #custom-space2 {
     background-color: @background;
-    border-radius: 0px 20px 20px 0px; /* top-left, top-right, bottom-right, bottom-left */
+    border-radius: 0px 20px 20px 0px;
     margin-top: 2px;
-}
-
-#custom-arch {
-    margin-left: 2px;
-    margin-right: -2px;
-    padding-left: 15px;
-    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
-
-    background-color: @background;
 }

@@ -7,7 +7,8 @@
         "pulseaudio",
         "backlight",
         "battery",
-        "network"
+        "network",
+        "hyprland/window"
     ],
 
     "modules-center": ["custom/space1", "hyprland/workspaces", "custom/space2"],
@@ -81,6 +82,12 @@
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 100,
         "on-click": "$HOME/.config/waybar/scripts/networkmanager.sh"
+    },
+
+    "hyprland/window": {
+        "format": "{initialTitle}",
+        "icon": true,
+        "rewrite": {}
     },
 
     "hyprland/workspaces": {

@@ -80,6 +80,7 @@ alias sc-status="sudo systemctl status"
 alias sc-enable="sudo systemctl enable"
 alias sc-disable="sudo systemctl disable"
 
+
 alias pacupg='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias paclean='sudo pacman -Sc'

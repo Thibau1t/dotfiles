@@ -86,8 +86,7 @@
 
     "hyprland/window": {
         "format": "{initialTitle}",
-        "icon": true,
-        "rewrite": {}
+        "icon": true
     },
 
     "hyprland/workspaces": {

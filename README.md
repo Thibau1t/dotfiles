@@ -85,3 +85,4 @@ Here are some of my favorite commands and tools:
 -   hyprland config + plugins
 -   discord
 -   thunderbird
+-   kitty (map ctrl+fn)

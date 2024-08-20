@@ -3,7 +3,7 @@
 # obtain the output device id
 SINK=$(pactl info | grep 'Default Sink' | awk '{print $3}')
 
-# Obtenez le volume actuel du périphérique de sortie
+# obtain the current volume
 current_volume=$(pactl get-sink-volume "$SINK" | awk '{print $5}' | sed 's/%//')
 
 # check if the volume is already at 100%

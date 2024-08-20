@@ -86,3 +86,4 @@ Here are some of my favorite commands and tools:
 -   discord
 -   thunderbird
 -   kitty (map ctrl+fn)
+-   delete button mode power

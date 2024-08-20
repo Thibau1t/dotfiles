@@ -79,10 +79,7 @@ button:hover {
 }
 
 #pulseaudio.muted {
-    margin-left: 2px;
-    padding-left: 10px;
-    border-radius: 20px 0px 0px 20px; /* top-left, top-right, bottom-right, bottom-left */
-
+    padding-left: 12px;
     background-color: @background;
     font-size: 22px;
     color: @red;

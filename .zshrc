@@ -118,6 +118,7 @@ alias gpl='git pull'
 alias gp='git push'
 alias gf='git fetch'
 
+alias sc='wf-recorder -g "$(slurp)" -f ~/Pictures/screen_recording_$(date +'%Y-%m-%d_%H-%M-%S').mp4 --audio="default"' #screencast
 
 # Shell integrations
 eval "$(fzf --zsh)"

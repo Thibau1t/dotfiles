@@ -82,8 +82,5 @@ Here are some of my favorite commands and tools:
 ## Todo List
 
 -   rsync or timeshift
--   hyprland config + plugins
--   discord
 -   thunderbird
 -   kitty (map ctrl+fn)
--   delete button mode power

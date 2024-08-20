@@ -180,7 +180,7 @@
     "group/group-power": {
         "orientation": "inherit",
         "drawer": {
-            "transition-duration": 600,
+            "transition-duration": 200,
             "transition-left-to-right": false
         },
         "modules": ["custom/shutdown", "custom/lock", "custom/reboot"]

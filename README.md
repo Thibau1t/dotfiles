@@ -9,6 +9,7 @@ Here's a quick overview of the contents of this repository:
 ```bash
 ❯ tree -I ".git" -a .
 .
+├── archmemo.md
 ├── .config
 │   ├── bat
 │   │   └── config
@@ -17,10 +18,21 @@ Here's a quick overview of the contents of this repository:
 │   │   ├── hyprland.conf
 │   │   ├── hyprlock.conf
 │   │   ├── hyprpaper.conf
+│   │   ├── modules
+│   │   │   ├── animations.conf
+│   │   │   ├── autostart.conf
+│   │   │   ├── env.conf
+│   │   │   ├── general.conf
+│   │   │   ├── input.conf
+│   │   │   ├── keybindings.conf
+│   │   │   ├── monitor.conf
+│   │   │   └── rules.conf
 │   │   └── scripts
 │   │       ├── clean_cliphist.sh
 │   │       ├── restart_pipewire.sh
-│   │       └── restart_xdg.sh
+│   │       ├── restart_xdg.sh
+│   │       ├── volume.sh
+│   │       └── volume_shift.sh
 │   ├── kitty
 │   │   ├── gruvbox_dark.conf
 │   │   └── kitty.conf
@@ -45,6 +57,8 @@ Here's a quick overview of the contents of this repository:
 │       └── style.css
 ├── README.md
 └── .zshrc
+
+14 directories, 35 files
 ```
 
 ## Software Used
@@ -82,5 +96,3 @@ Here are some of my favorite commands and tools:
 ## Todo List
 
 -   rsync or timeshift
--   thunderbird
--   kitty (map ctrl+fn)

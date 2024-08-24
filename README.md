@@ -94,5 +94,3 @@ Here are some of my favorite commands and tools:
 -   **[Paru](https://github.com/Morganamilo/paru)** - An AUR helper.
 
 ## Todo List
-
--   rsync or timeshift

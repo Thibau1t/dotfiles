@@ -143,6 +143,10 @@ systemd-analyze
 
 ### Use timeshift
 
+```bash
+sudo -E timeshift-gtk
+```
+
 ### Create a backup with rsync
 
 ```bash
@@ -163,4 +167,12 @@ cd /mnt/usb && ls
 # restore the backup
 rsync -aAXHv --delete --exclude="lost+found" /mnt/usb/ /mnt/system
 # reboot (and after choice Boot existing OS)
+```
+
+## Virtual Box
+
+Launch the kernel modules
+
+```bash
+modprobe vboxdrv
 ```

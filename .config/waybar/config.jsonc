@@ -128,7 +128,7 @@
         "format": "{}%  ",
         "on-click": "$HOME/.config/waybar/scripts/systeminfo.sh",
         "states": {
-            "warning": 70,
+            "critical": 70,
             "good": 60,
             "excellent": 30
         }

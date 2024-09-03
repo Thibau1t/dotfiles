@@ -9,8 +9,8 @@ index_file="$HOME/.cache/wallpaper/current_wallpaper_index"
 # File to store the current wallpaper
 current_wallpaper_file="$HOME/.cache/wallpaper/current_wallpaper.png"
 
-# Get the monitor name using hyprctl
-monitor=$(hyprctl monitors | grep Monitor | awk '{print $2}')
+# Get the list of monitor names using hyprctl
+monitor_list=$(hyprctl monitors | grep '^Monitor' | awk '{print $2}')
 
 # Ensure the directory exists
 if [ ! -d "$directory" ]; then
@@ -46,9 +46,13 @@ if [ -n "$next_wallpaper" ]; then
     # Ensure hyprpaper is ready
     hyprctl hyprpaper unload all
 
-    # Preload and apply the selected background
+    # Preload the wallpaper
     hyprctl hyprpaper preload "$next_wallpaper"
-    hyprctl hyprpaper wallpaper "$monitor,$next_wallpaper"
+
+    # Apply the wallpaper to each monitor
+    for monitor in $monitor_list; do
+        hyprctl hyprpaper wallpaper "$monitor,$next_wallpaper"
+    done
 
     # Update the index file with the next index
     echo $next_index > "$index_file"

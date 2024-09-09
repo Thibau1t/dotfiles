@@ -136,6 +136,7 @@
 
     "clock": {
         "format": "{:%H:%M}",
+        "timezone": "Europe/Paris",
         "tooltip-format": "<span size='13pt' font='JetBrains Mono Nerd Font'>{calendar}</span>",
         "calendar": {
             "mode": "month",

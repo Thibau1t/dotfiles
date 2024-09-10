@@ -2,6 +2,8 @@
 
 Welcome to my dotfiles repository! This repository contains all the configurations I use to customize my working environment on [Arch Linux](https://www.archlinux.org) and other systems.
 
+I use the softwware stow to manage my dotfiles. You can find the stow documentation [here](https://www.gnu.org/software/stow/manual/stow.html).
+
 ## Directory Structure
 
 Here's a quick overview of the contents of this repository:
@@ -29,9 +31,10 @@ Here's a quick overview of the contents of this repository:
 │   │   │   └── rules.conf
 │   │   └── scripts
 │   │       ├── clean_cliphist.sh
+│   │       ├── init_cache_wallpaper.sh
+│   │       ├── next_wallpaper.sh
 │   │       ├── restart_pipewire.sh
 │   │       ├── restart_xdg.sh
-│   │       ├── volume.sh
 │   │       └── volume_shift.sh
 │   ├── kitty
 │   │   ├── gruvbox_dark.conf
@@ -46,6 +49,7 @@ Here's a quick overview of the contents of this repository:
 │   ├── swappy
 │   │   └── config
 │   ├── wallpapers
+│   │   ├── david.png
 │   │   └── mountains.png
 │   └── waybar
 │       ├── config.jsonc
@@ -55,10 +59,12 @@ Here's a quick overview of the contents of this repository:
 │       │   ├── networkmanager.sh
 │       │   └── systeminfo.sh
 │       └── style.css
+├── pacman
+│   └── pacman.conf
 ├── README.md
 └── .zshrc
 
-14 directories, 35 files
+15 directories, 38 files
 ```
 
 ## Software Used

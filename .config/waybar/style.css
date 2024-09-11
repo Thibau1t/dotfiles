@@ -72,14 +72,12 @@ button:hover {
 
 /* pulseaudio */
 #pulseaudio {
-    margin-left: -5px;
     background-color: @background;
     font-size: 16px;
     color: @blue;
 }
 
 #pulseaudio.muted {
-    padding-left: 12px;
     background-color: @background;
     font-size: 22px;
     color: @red;

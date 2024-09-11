@@ -26,11 +26,11 @@
     "pulseaudio": {
         "scroll-step": 0.5, // %, can be a float
         "reverse-scrolling": true,
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "󰝟",
-        //"format-source": "{volume}% ",
+        "format-source": "{volume}% ",
         "tooltip": false,
         "format-source-muted": "",
         "format-icons": {

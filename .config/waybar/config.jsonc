@@ -32,7 +32,7 @@
         "format-muted": "󰝟",
         "format-source": "{volume}% ",
         "tooltip": false,
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

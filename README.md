@@ -100,3 +100,6 @@ Here are some of my favorite commands and tools:
 -   **[Paru](https://github.com/Morganamilo/paru)** - An AUR helper.
 
 ## Todo List
+
+-   change waybar style, separate modules
+-   add script for up or down microphone volume

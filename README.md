@@ -102,4 +102,5 @@ Here are some of my favorite commands and tools:
 ## Todo List
 
 -   change waybar style, separate modules
--   add script for up or down microphone volume
+-   up or down microphone volume
+-   random wallpaper on boot

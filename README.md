@@ -104,3 +104,5 @@ Here are some of my favorite commands and tools:
 -   change waybar style, separate modules
 -   up or down microphone volume
 -   random wallpaper on boot
+-   add insert touch
+-   test output hdmi-c

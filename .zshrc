@@ -61,6 +61,7 @@ alias t='tail -f'
 alias grep='grep --color'
 alias mk='mkdir'
 alias s='sudo'
+alias tree="tree -C"
 
 alias -g H='| head'
 alias -g T='| tail'

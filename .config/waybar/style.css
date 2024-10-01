@@ -81,7 +81,7 @@ button:hover {
 #pulseaudio.muted {
     background-color: @background;
     font-size: 22px;
-    color: @red;
+    color: @dark-red;
 }
 
 /* backlight */

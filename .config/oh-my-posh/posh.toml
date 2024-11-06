@@ -1,6 +1,23 @@
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+  blue = '#458588'
+  gray = '#928374'
+  green = '#b8bb26'
+  red = '#fb4934'
+  yellow = '#fabd2f'
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'p:green'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
 
 [[blocks]]
   type = 'prompt'
@@ -8,39 +25,37 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'path'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'p:blue'
     template = '{{ .Path }}'
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'path'
 
     [blocks.segments.properties]
       style = 'full'
 
-
   [[blocks.segments]]
-    type = 'git'
     style = 'plain'
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
     foreground = 'p:gray'
     background = 'transparent'
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    type = 'git'
 
     [blocks.segments.properties]
       branch_icon = ''
       commit_icon = '@'
       fetch_status = true
 
-
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'executiontime'
     style = 'plain'
+    template = '{{ .FormattedMs }}'
     foreground = 'p:yellow'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    type = 'executiontime'
 
     [blocks.segments.properties]
       threshold = 5000
@@ -51,33 +66,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'text'
     style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}p:red{{end}}",
-      "{{if eq .Code 0}}p:green{{end}}",
-    ]
-    background = 'transparent'
     template = '❯'
-
-[transient_prompt]
-  foreground_templates = [
-    "{{if gt .Code 0}}p:red{{end}}",
-    "{{if eq .Code 0}}p:green{{end}}",
-  ]
-  background = 'transparent'
-  template = '❯ '
-
-[secondary_prompt]
-  foreground = 'p:green'
-  background = 'transparent'
-  template = '❯❯ '
-
-
-# gruvbox_dark
-[palette]
-  green = '#b8bb26'
-  gray = '#928374'
-  red = '#fb4934'
-  blue = '#458588'
-  yellow = '#fabd2f'
+    background = 'transparent'
+    type = 'text'
+    foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']

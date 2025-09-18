@@ -125,3 +125,12 @@ alias sc='wf-recorder -g "$(slurp)" -f ~/Pictures/screen_recording_$(date +'%Y-%
 eval "$(fzf --zsh)"
 eval $(thefuck --alias f)
 eval "$(zoxide init --cmd cd zsh)"
+
+# Exegol 
+
+## wayland to x11 for exegol
+xhost +SI:localuser:root &> /dev/null
+
+## compeltions enable and alias
+eval "$(register-python-argcomplete --no-defaults exegol)"
+alias exegol='sudo -E /home/thibault/.local/bin/exegol'
